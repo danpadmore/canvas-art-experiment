@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>canvas test</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script type="text/javascript" src="index.js"></script>
+</head>
+
+<body onfocus="">
+
+    <div id="left">
+        <canvas id="canvas">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+    </div>
+
+    <div id="right">
+        <textarea id="designScript" autofocus>var ctx = getCanvasContext();
+
+var x = 0;
+var y = 75;
+var width = 1024;
+height = 768;
+ctx.fillStyle = "black";
+ctx.fillRect(0, 0, width, height);
+
+drawCircle("#F68");
+drawCircle("#016283");
+drawCircle("#9C8");
+drawCircle("#FFF");
+drawCircle("#FFF768");
+drawCircle("#F768");
+
+function drawCircle(color){
+   ctx.beginPath();
+   ctx.fillStyle = color;
+   ctx.arc((width / 2) - 50 + x, y, 50, 0,2 * Math.PI);
+   ctx.fill();
+
+   x += 27;
+   y += 120;
+}
+
+/*var x = 0;
+var width = 10;
+
+for(var i = 0; i < 250; i++){
+   drawLine("#F68");
+   drawLine("#016283");
+   drawLine("#9C8");
+   drawLine("#FFF");
+   drawLine("#FFF768");
+   drawLine("#F768");
+}
+
+function drawLine(color){
+   ctx.fillStyle = color;
+   ctx.fillRect(x,0,width,768);
+
+   x += width;
+}*/
+
+/*
+// Create gradient
+var grd = ctx.createRadialGradient(10,50,1000,500,250,10);
+grd.addColorStop(0,"#519399");
+grd.addColorStop(0.25,"#09DD51");
+grd.addColorStop(0.5,"white");
+grd.addColorStop(0.95,"maroon");
+grd.addColorStop(1,"#778777");
+
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(0,0,1024,768);
+*/
+        
+        
+        
+        </textarea>
+    </div>
+
+</body>
+</html>
